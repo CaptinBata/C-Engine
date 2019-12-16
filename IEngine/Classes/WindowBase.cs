@@ -10,6 +10,7 @@ namespace IEngine.Classes
     {
         protected RenderWindow _sfmlWindow;
         protected InputBase _inputHandler;
+        protected EngineBase _engine;
         protected List<SFMLObjectBase> _gameObjects = new List<SFMLObjectBase>();
 
         public virtual void AddNewObjectToRender(SFMLObjectBase shape)

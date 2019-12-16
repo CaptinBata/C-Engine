@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v2.1": {
       "Engine/1.0.0": {
         "dependencies": {
-          "IEngine": "1.0.0",
-          "Snake": "1.0.0"
+          "IEngine": "1.0.0"
         },
         "runtime": {
           "Engine.dll": {}
@@ -367,34 +366,12 @@
           }
         }
       },
-      "Colour Lines/1.0.0": {
-        "dependencies": {
-          "IEngine": "1.0.0",
-          "Utils": "1.0.0"
-        },
-        "runtime": {
-          "Colour Lines.dll": {}
-        }
-      },
       "IEngine/1.0.0": {
         "dependencies": {
           "SFML.Net": "2.5.0"
         },
         "runtime": {
           "IEngine.dll": {}
-        }
-      },
-      "Snake/1.0.0": {
-        "dependencies": {
-          "IEngine": "1.0.0"
-        },
-        "runtime": {
-          "Snake.dll": {}
-        }
-      },
-      "Utils/1.0.0": {
-        "runtime": {
-          "Utils.dll": {}
         }
       }
     }
@@ -447,22 +424,7 @@
       "path": "sfml.window/2.5.0",
       "hashPath": "sfml.window.2.5.0.nupkg.sha512"
     },
-    "Colour Lines/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "IEngine/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Snake/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Utils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

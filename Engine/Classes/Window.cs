@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using IEngine;
 using IEngine.Classes;
+using Engine;
 using SFML.Window;
 using SFML.Graphics;
 
@@ -10,9 +11,10 @@ namespace Engine.Classes
 {
     public class Window : WindowBase
     {
-        public Window(InputBase input)
+        public Window(InputBase input, EngineBase engine)
         {
             _inputHandler = input;
+            _engine = engine;
             _sfmlWindow = new RenderWindow(new VideoMode(1600, 800), "SFML window");
             _sfmlWindow.Closed += CloseWindow;
             _sfmlWindow.KeyPressed += KeyPressed;
@@ -54,6 +56,8 @@ namespace Engine.Classes
                 _sfmlWindow.Clear();
 
                 UpdateAllObjects();
+
+                _engine.IterateCoroutine();
 
                 DrawAllObjects();
 

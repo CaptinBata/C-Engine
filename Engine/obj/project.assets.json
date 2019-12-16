@@ -508,20 +508,6 @@
           "lib/netstandard2.0/SFML.Window.dll": {}
         }
       },
-      "Colour Lines/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "IEngine": "1.0.0",
-          "Utils": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Colour Lines.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Colour Lines.dll": {}
-        }
-      },
       "IEngine/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -533,29 +519,6 @@
         },
         "runtime": {
           "bin/placeholder/IEngine.dll": {}
-        }
-      },
-      "Snake/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "IEngine": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Snake.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Snake.dll": {}
-        }
-      },
-      "Utils/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Utils.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Utils.dll": {}
         }
       }
     }
@@ -1163,33 +1126,16 @@
         "sfml.window.nuspec"
       ]
     },
-    "Colour Lines/1.0.0": {
-      "type": "project",
-      "path": "../Physics Pong/Colour Lines.csproj",
-      "msbuildProject": "../Physics Pong/Colour Lines.csproj"
-    },
     "IEngine/1.0.0": {
       "type": "project",
       "path": "../IEngine/IEngine.csproj",
       "msbuildProject": "../IEngine/IEngine.csproj"
-    },
-    "Snake/1.0.0": {
-      "type": "project",
-      "path": "../Snake/Snake.csproj",
-      "msbuildProject": "../Snake/Snake.csproj"
-    },
-    "Utils/1.0.0": {
-      "type": "project",
-      "path": "../Utils/Utils.csproj",
-      "msbuildProject": "../Utils/Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Colour Lines >= 1.0.0",
       "IEngine >= 1.0.0",
-      "Microsoft.NETCore.App >= 2.1.0",
-      "Snake >= 1.0.0"
+      "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -1227,12 +1173,6 @@
           "projectReferences": {
             "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj": {
               "projectPath": "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj"
-            },
-            "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj": {
-              "projectPath": "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj"
-            },
-            "D:\\C#\\C# Engine\\Snake\\Snake.csproj": {
-              "projectPath": "D:\\C#\\C# Engine\\Snake\\Snake.csproj"
             }
           }
         }
@@ -1247,6 +1187,7 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

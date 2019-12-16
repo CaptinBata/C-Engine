@@ -1,15 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <StartupObject>Engine.Program</StartupObject>
+    <StartupObject></StartupObject>
+    <ApplicationIcon />
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\IEngine\IEngine.csproj" />
-    <ProjectReference Include="..\Physics Pong\Colour Lines.csproj" />
-    <ProjectReference Include="..\Snake\Snake.csproj" />
   </ItemGroup>
 
 </Project>

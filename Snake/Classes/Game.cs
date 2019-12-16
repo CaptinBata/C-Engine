@@ -12,6 +12,10 @@ namespace Snake.Classes
 
         Color[,] _colors = new Color[100, 100];
 
+        public override void AddEngineReference(EngineBase engine)
+        {
+            _engine = engine;
+        }
 
         void GenerateColours(WindowBase renderWindow)
         {
@@ -42,6 +46,8 @@ namespace Snake.Classes
 
         public override List<SFMLObjectBase> SetUpGame(WindowBase renderWindow)
         {
+            _engine.StartCoroutine(CountNumbers());
+
             var objects = new List<SFMLObjectBase>();
             GenerateColours(renderWindow);
 
@@ -57,6 +63,17 @@ namespace Snake.Classes
                 }
             }
             return objects;
+        }
+
+        IEnumerator<CoroutineEnumerator> CountNumbers()
+        {
+            var counter = 0;
+            while (true)
+            {
+                counter++;
+                Console.WriteLine(counter);
+                yield return null;
+            }
         }
     }
 }

@@ -18,18 +18,10 @@ D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp2.1\Utils.pdb
 D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp2.1\Snake.dll
 D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp2.1\Snake.pdb
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.deps.json
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.runtimeconfig.json
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.runtimeconfig.dev.json
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.dll
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.pdb
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Colour Lines.dll
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\IEngine.dll
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Snake.dll
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Utils.dll
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\IEngine.pdb
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Colour Lines.pdb
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Snake.pdb
-D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Utils.pdb
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csprojAssemblyReference.cache
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csproj.CoreCompileInputs.cache
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.AssemblyInfoInputs.cache
