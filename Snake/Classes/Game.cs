@@ -46,7 +46,8 @@ namespace Snake.Classes
 
         public override List<SFMLObjectBase> SetUpGame(WindowBase renderWindow)
         {
-            _engine.StartCoroutine(CountNumbers());
+            _engine.StartCoroutine(CountNumbersUp());
+            _engine.StartCoroutine(CountNumbersDown());
 
             var objects = new List<SFMLObjectBase>();
             GenerateColours(renderWindow);
@@ -65,13 +66,24 @@ namespace Snake.Classes
             return objects;
         }
 
-        IEnumerator<CoroutineEnumerator> CountNumbers()
+        IEnumerator<CoroutineEnumerator> CountNumbersUp()
         {
-            var counter = 0;
+            var counter = int.MinValue;
             while (true)
             {
                 counter++;
-                Console.WriteLine(counter);
+                Console.WriteLine($"Up: {counter}");
+                yield return null;
+            }
+        }
+
+        IEnumerator<CoroutineEnumerator> CountNumbersDown()
+        {
+            var counter = int.MaxValue;
+            while (true)
+            {
+                counter--;
+                Console.WriteLine($"Down: {counter}");
                 yield return null;
             }
         }

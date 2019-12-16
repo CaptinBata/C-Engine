@@ -3,13 +3,15 @@ using Engine.Classes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 namespace Engine
 {
     public class EngineCore : EngineBase
     {
 
-        static List<IEnumerator> _coroutines = new List<IEnumerator>();
+        static ConcurrentDictionary<int, IEnumerator> _coroutines = new ConcurrentDictionary<int, IEnumerator>();
+        int coroutineCounter = 0;
 
         public EngineCore(GameBase game)
         {
@@ -32,15 +34,19 @@ namespace Engine
 
         public override void StartCoroutine(IEnumerator coroutine)
         {
-            _coroutines.Add(coroutine);
+            _coroutines.TryAdd(coroutineCounter, coroutine);
+            coroutineCounter++;
         }
 
         public override void IterateCoroutine()
         {
             foreach (var iter in _coroutines)
             {
-                if (!iter.MoveNext())
-                    _coroutines.Remove(iter);
+                if (!iter.Value.MoveNext())
+                {
+                    _coroutines.TryRemove(iter.Key, out var value);
+                    coroutineCounter--;
+                }
             }
         }
     }
