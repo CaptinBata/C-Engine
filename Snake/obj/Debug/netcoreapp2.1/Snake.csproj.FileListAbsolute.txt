@@ -1,0 +1,23 @@
+D:\C#\Physics and Graphics\Snake\bin\Debug\netcoreapp2.1\Snake.deps.json
+D:\C#\Physics and Graphics\Snake\bin\Debug\netcoreapp2.1\Snake.dll
+D:\C#\Physics and Graphics\Snake\bin\Debug\netcoreapp2.1\Snake.pdb
+D:\C#\Physics and Graphics\Snake\bin\Debug\netcoreapp2.1\IEngine.dll
+D:\C#\Physics and Graphics\Snake\bin\Debug\netcoreapp2.1\IEngine.pdb
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.csprojAssemblyReference.cache
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.AssemblyInfoInputs.cache
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.AssemblyInfo.cs
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.csproj.CopyComplete
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.dll
+D:\C#\Physics and Graphics\Snake\obj\Debug\netcoreapp2.1\Snake.pdb
+D:\C#\C# Engine\Snake\bin\Debug\netcoreapp2.1\Snake.deps.json
+D:\C#\C# Engine\Snake\bin\Debug\netcoreapp2.1\Snake.dll
+D:\C#\C# Engine\Snake\bin\Debug\netcoreapp2.1\Snake.pdb
+D:\C#\C# Engine\Snake\bin\Debug\netcoreapp2.1\IEngine.dll
+D:\C#\C# Engine\Snake\bin\Debug\netcoreapp2.1\IEngine.pdb
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.csprojAssemblyReference.cache
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.csproj.CoreCompileInputs.cache
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.AssemblyInfoInputs.cache
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.AssemblyInfo.cs
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.csproj.CopyComplete
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.dll
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.pdb

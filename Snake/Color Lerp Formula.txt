@@ -1,0 +1,1 @@
+currentColour = (targetColour - currentColour) * rate + currentColour

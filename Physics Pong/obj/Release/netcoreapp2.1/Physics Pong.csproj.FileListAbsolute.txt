@@ -1,0 +1,9 @@
+D:\C#\Physics and Graphics\Physics Pong\bin\Release\netcoreapp2.1\Physics Pong.deps.json
+D:\C#\Physics and Graphics\Physics Pong\bin\Release\netcoreapp2.1\Physics Pong.runtimeconfig.json
+D:\C#\Physics and Graphics\Physics Pong\bin\Release\netcoreapp2.1\Physics Pong.runtimeconfig.dev.json
+D:\C#\Physics and Graphics\Physics Pong\bin\Release\netcoreapp2.1\Physics Pong.dll
+D:\C#\Physics and Graphics\Physics Pong\bin\Release\netcoreapp2.1\Physics Pong.pdb
+D:\C#\Physics and Graphics\Physics Pong\obj\Release\netcoreapp2.1\Physics Pong.AssemblyInfoInputs.cache
+D:\C#\Physics and Graphics\Physics Pong\obj\Release\netcoreapp2.1\Physics Pong.AssemblyInfo.cs
+D:\C#\Physics and Graphics\Physics Pong\obj\Release\netcoreapp2.1\Physics Pong.dll
+D:\C#\Physics and Graphics\Physics Pong\obj\Release\netcoreapp2.1\Physics Pong.pdb

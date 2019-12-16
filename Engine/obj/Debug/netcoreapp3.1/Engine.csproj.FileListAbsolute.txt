@@ -1,0 +1,7 @@
+D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp3.1\Engine.exe
+D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp3.1\Utils.dll
+D:\C#\Physics and Graphics\Engine\bin\Debug\netcoreapp3.1\Utils.pdb
+D:\C#\Physics and Graphics\Engine\obj\Debug\netcoreapp3.1\Engine.csprojAssemblyReference.cache
+D:\C#\Physics and Graphics\Engine\obj\Debug\netcoreapp3.1\Engine.AssemblyInfoInputs.cache
+D:\C#\Physics and Graphics\Engine\obj\Debug\netcoreapp3.1\Engine.AssemblyInfo.cs
+D:\C#\Physics and Graphics\Engine\obj\Debug\netcoreapp3.1\Engine.csproj.CopyComplete

@@ -1,0 +1,5 @@
+D:\C#\Physics and Graphics\IEngine\bin\Debug\netcoreapp3.1\IEngine.deps.json
+D:\C#\Physics and Graphics\IEngine\bin\Debug\netcoreapp3.1\IEngine.dll
+D:\C#\Physics and Graphics\IEngine\obj\Debug\netcoreapp3.1\IEngine.csprojAssemblyReference.cache
+D:\C#\Physics and Graphics\IEngine\obj\Debug\netcoreapp3.1\IEngine.AssemblyInfoInputs.cache
+D:\C#\Physics and Graphics\IEngine\obj\Debug\netcoreapp3.1\IEngine.AssemblyInfo.cs

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Colour_Lines</RootNamespace>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IEngine\IEngine.csproj" />
+    <ProjectReference Include="..\Utils\Utils.csproj" />
+  </ItemGroup>
+
+</Project>

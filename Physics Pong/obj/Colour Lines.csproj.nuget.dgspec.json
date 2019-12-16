@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj": {}
+  },
+  "projects": {
+    "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj",
+        "projectName": "IEngine",
+        "projectPath": "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj",
+        "packagesPath": "C:\\Users\\Nykolas\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\C# Engine\\IEngine\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nykolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "SFML.Net": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj",
+        "projectName": "Colour Lines",
+        "projectPath": "D:\\C#\\C# Engine\\Physics Pong\\Colour Lines.csproj",
+        "packagesPath": "C:\\Users\\Nykolas\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\C# Engine\\Physics Pong\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nykolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj": {
+                "projectPath": "D:\\C#\\C# Engine\\IEngine\\IEngine.csproj"
+              },
+              "D:\\C#\\C# Engine\\Utils\\Utils.csproj": {
+                "projectPath": "D:\\C#\\C# Engine\\Utils\\Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\C#\\C# Engine\\Utils\\Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\C# Engine\\Utils\\Utils.csproj",
+        "projectName": "Utils",
+        "projectPath": "D:\\C#\\C# Engine\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\Nykolas\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\C# Engine\\Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nykolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
