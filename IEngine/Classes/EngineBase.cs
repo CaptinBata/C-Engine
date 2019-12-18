@@ -24,5 +24,21 @@ namespace IEngine.Classes
         {
             throw new NotImplementedException();
         }
+
+        public virtual WindowBase GetWindow()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual InputBase GetInputHandler()
+        {
+            return _inputHandler;
+        }
+
+        public virtual void AssignGame(GameBase game)
+        {
+            _runningGame = game;
+            _runningWindow.AssignGame(game);
+        }
     }
 }

@@ -7,6 +7,14 @@ namespace IEngine.Interfaces
 {
     public interface IGame
     {
-        List<SFMLObjectBase> SetUpGame(WindowBase renderWindow);
+        List<SFMLObjectBase> GetGameObjects();
+
+        void SetUpGame(WindowBase renderWindow);
+
+        void Update();
+        void UpdateGameLogic();
+        void UpdateObjectLogic();
+
+        void Draw(WindowBase renderWindow);
     }
 }

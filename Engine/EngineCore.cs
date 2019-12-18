@@ -13,22 +13,14 @@ namespace Engine
         static ConcurrentDictionary<int, IEnumerator> _coroutines = new ConcurrentDictionary<int, IEnumerator>();
         int coroutineCounter = 0;
 
-        public EngineCore(GameBase game)
+        public EngineCore()
         {
             _inputHandler = new Input();
             _runningWindow = new Window(_inputHandler, this);
-            _runningGame = game;
         }
 
         public override void RunEngine()
         {
-            var objects = _runningGame.SetUpGame(_runningWindow);
-
-            foreach (var item in objects)
-            {
-                _runningWindow.AddNewObjectToRender(item);
-            }
-
             _runningWindow.RunWindow();
         }
 
@@ -36,6 +28,11 @@ namespace Engine
         {
             _coroutines.TryAdd(coroutineCounter, coroutine);
             coroutineCounter++;
+        }
+
+        public override WindowBase GetWindow()
+        {
+            return _runningWindow;
         }
 
         public override void IterateCoroutine()

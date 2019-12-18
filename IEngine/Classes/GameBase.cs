@@ -7,14 +7,42 @@ namespace IEngine.Classes
 {
     public class GameBase : IGame
     {
-        protected IInput _inputHandler;
+        protected InputBase _inputHandler;
         protected EngineBase _engine;
-        public virtual List<SFMLObjectBase> SetUpGame(WindowBase renderWindow)
+        protected List<SFMLObjectBase> _gameObjects = new List<SFMLObjectBase>();
+
+        public virtual void AddEngineReference(EngineBase engine)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void AddEngineReference(EngineBase engine)
+        public virtual List<SFMLObjectBase> GetGameObjects()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void Draw(WindowBase renderWindow)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void UpdateGameLogic()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void UpdateObjectLogic()
+        {
+            foreach (var gameObject in _gameObjects)
+                gameObject.Update();
+        }
+
+        public virtual void SetUpGame(WindowBase renderWindow)
         {
             throw new NotImplementedException();
         }

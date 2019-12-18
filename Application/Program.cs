@@ -13,7 +13,9 @@ namespace Application
         static void Main(string[] args)
         {
             _game = new Snake.Classes.Game();
-            _engine = new EngineCore(_game);
+            _engine = new EngineCore();
+            _game.SetUpGame(_engine.GetWindow());
+            _engine.AssignGame(_game);
             _game.AddEngineReference(_engine);
             _engine.RunEngine();
         }

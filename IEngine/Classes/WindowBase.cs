@@ -11,16 +11,16 @@ namespace IEngine.Classes
         protected RenderWindow _sfmlWindow;
         protected InputBase _inputHandler;
         protected EngineBase _engine;
-        protected List<SFMLObjectBase> _gameObjects = new List<SFMLObjectBase>();
-
-        public virtual void AddNewObjectToRender(SFMLObjectBase shape)
-        {
-            throw new NotImplementedException();
-        }
+        protected GameBase _game;
 
         public virtual void CloseWindow(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        public RenderWindow GetRenderWindow()
+        {
+            return _sfmlWindow;
         }
 
         public virtual uint GetHeight()
@@ -36,6 +36,11 @@ namespace IEngine.Classes
         public virtual void RunWindow()
         {
             throw new NotImplementedException();
+        }
+
+        public void AssignGame(GameBase game)
+        {
+            _game = game;
         }
     }
 }

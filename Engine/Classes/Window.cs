@@ -37,14 +37,12 @@ namespace Engine.Classes
 
         void DrawAllObjects()
         {
-            foreach (var shape in _gameObjects)
-                shape.Draw(_sfmlWindow);
+            _game.Draw(this);
         }
 
         void UpdateAllObjects()
         {
-            foreach (var sfmlObject in _gameObjects)
-                sfmlObject.Update();
+            _game.Update();
         }
 
         public override void RunWindow()
@@ -70,11 +68,6 @@ namespace Engine.Classes
         public override void CloseWindow(object sender, EventArgs e)
         {
             _sfmlWindow.Close();
-        }
-
-        public override void AddNewObjectToRender(SFMLObjectBase gameObject)
-        {
-            _gameObjects.Add(gameObject);
         }
     }
 }

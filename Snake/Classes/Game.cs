@@ -12,9 +12,32 @@ namespace Snake.Classes
 
         Color[,] _colors = new Color[100, 100];
 
+        public Game()
+        {
+
+        }
+
+        public override void SetUpGame(WindowBase renderWindow)
+        {
+            GenerateColours(renderWindow);
+
+            for (int x = 0; x < renderWindow.GetWidth(); x++)
+            {
+                for (int y = 0; y < renderWindow.GetHeight(); y++)
+                {
+                    var shape = new ColourObject();
+                    shape.shape = new CircleShape(1, 30);
+                    shape.shape.Position = new Vector2f(x, y);
+                    shape.shape.FillColor = _colors[x, y];
+                    _gameObjects.Add(shape);
+                }
+            }
+        }
+
         public override void AddEngineReference(EngineBase engine)
         {
             _engine = engine;
+            _inputHandler = engine.GetInputHandler();
         }
 
         void GenerateColours(WindowBase renderWindow)
@@ -44,48 +67,23 @@ namespace Snake.Classes
             }
         }
 
-        public override List<SFMLObjectBase> SetUpGame(WindowBase renderWindow)
+        public override void Draw(WindowBase window)
         {
-            _engine.StartCoroutine(CountNumbersUp());
-            _engine.StartCoroutine(CountNumbersDown());
-
-            var objects = new List<SFMLObjectBase>();
-            GenerateColours(renderWindow);
-
-            for (int x = 0; x < renderWindow.GetWidth(); x++)
+            var renderWindow = window.GetRenderWindow();
+            foreach (var gameObject in _gameObjects)
             {
-                for (int y = 0; y < renderWindow.GetHeight(); y++)
-                {
-                    var shape = new ColourObject();
-                    shape.shape = new CircleShape(1, 30);
-                    shape.shape.Position = new Vector2f(x, y);
-                    shape.shape.FillColor = _colors[x, y];
-                    objects.Add(shape);
-                }
-            }
-            return objects;
-        }
-
-        IEnumerator<CoroutineEnumerator> CountNumbersUp()
-        {
-            var counter = int.MinValue;
-            while (true)
-            {
-                counter++;
-                Console.WriteLine($"Up: {counter}");
-                yield return null;
+                gameObject.Draw(renderWindow);
             }
         }
 
-        IEnumerator<CoroutineEnumerator> CountNumbersDown()
+        public override void UpdateGameLogic()
         {
-            var counter = int.MaxValue;
-            while (true)
-            {
-                counter--;
-                Console.WriteLine($"Down: {counter}");
-                yield return null;
-            }
+
+        }
+        public override void Update()
+        {
+            UpdateGameLogic();
+            UpdateObjectLogic();
         }
     }
 }
