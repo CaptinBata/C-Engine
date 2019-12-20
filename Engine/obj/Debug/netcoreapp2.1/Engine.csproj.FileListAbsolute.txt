@@ -23,7 +23,6 @@ D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\Engine.pdb
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\IEngine.dll
 D:\C#\C# Engine\Engine\bin\Debug\netcoreapp2.1\IEngine.pdb
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csprojAssemblyReference.cache
-D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csproj.CoreCompileInputs.cache
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.AssemblyInfoInputs.cache
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.AssemblyInfo.cs
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csproj.CopyComplete

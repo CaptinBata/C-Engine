@@ -10,7 +10,6 @@ D:\C#\C# Engine\IEngine\bin\Debug\netcoreapp2.1\IEngine.deps.json
 D:\C#\C# Engine\IEngine\bin\Debug\netcoreapp2.1\IEngine.dll
 D:\C#\C# Engine\IEngine\bin\Debug\netcoreapp2.1\IEngine.pdb
 D:\C#\C# Engine\IEngine\obj\Debug\netcoreapp2.1\IEngine.csprojAssemblyReference.cache
-D:\C#\C# Engine\IEngine\obj\Debug\netcoreapp2.1\IEngine.csproj.CoreCompileInputs.cache
 D:\C#\C# Engine\IEngine\obj\Debug\netcoreapp2.1\IEngine.AssemblyInfoInputs.cache
 D:\C#\C# Engine\IEngine\obj\Debug\netcoreapp2.1\IEngine.AssemblyInfo.cs
 D:\C#\C# Engine\IEngine\obj\Debug\netcoreapp2.1\IEngine.dll

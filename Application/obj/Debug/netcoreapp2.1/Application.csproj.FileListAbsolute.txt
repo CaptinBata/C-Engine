@@ -14,7 +14,6 @@ D:\C#\C# Engine\Application\bin\Debug\netcoreapp2.1\Snake.pdb
 D:\C#\C# Engine\Application\bin\Debug\netcoreapp2.1\IEngine.pdb
 D:\C#\C# Engine\Application\bin\Debug\netcoreapp2.1\Utils.pdb
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.csprojAssemblyReference.cache
-D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.csproj.CoreCompileInputs.cache
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.AssemblyInfoInputs.cache
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.AssemblyInfo.cs
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.csproj.CopyComplete

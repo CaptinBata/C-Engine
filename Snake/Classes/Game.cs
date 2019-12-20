@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using IEngine.Classes;
 using SFML.Graphics;
 using SFML.System;
+using System.Linq;
 
 namespace Snake.Classes
 {
@@ -20,18 +21,6 @@ namespace Snake.Classes
         public override void SetUpGame(WindowBase renderWindow)
         {
             GenerateColours(renderWindow);
-
-            for (int x = 0; x < renderWindow.GetWidth(); x++)
-            {
-                for (int y = 0; y < renderWindow.GetHeight(); y++)
-                {
-                    var shape = new ColourObject();
-                    shape.shape = new CircleShape(1, 30);
-                    shape.shape.Position = new Vector2f(x, y);
-                    shape.shape.FillColor = _colors[x, y];
-                    _gameObjects.Add(shape);
-                }
-            }
         }
 
         public override void AddEngineReference(EngineBase engine)
@@ -40,30 +29,46 @@ namespace Snake.Classes
             _inputHandler = engine.GetInputHandler();
         }
 
+        byte ColourLerp(byte current, byte target)
+        {
+            var rate = 0.5;
+            return (byte)((target - current) * rate + current);
+        }
+
         void GenerateColours(WindowBase renderWindow)
         {
-            _colors = new Color[renderWindow.GetWidth(), renderWindow.GetHeight()];
-            var colourScale = Math.Pow(256, 3) / (renderWindow.GetWidth() * renderWindow.GetHeight());
-            byte R = 0, G = 0, B = 0, GL = G, RL = R;
+            var colorArray = new List<Color>();
+            var colours = new Color[7] { new Color(255, 0, 0), new Color(255, 127, 0), new Color(255, 255, 0), new Color(0, 255, 0), new Color(0, 0, 255), new Color(46, 43, 95), new Color(139, 0, 255) };
+            var posScale = (int)(renderWindow.GetWidth() / colours.Length);
 
-            for (int x = 0; x < renderWindow.GetWidth(); x++)
+            for (int iCount = 0; iCount < colours.Length; iCount++)
             {
-                for (int y = 0; y < renderWindow.GetHeight(); y++)
+                var shape = new ColourObject
                 {
-                    B += Convert.ToByte(colourScale);
-                    if (B >= 255 - Convert.ToByte(colourScale))
-                    {
-                        GL = G;
-                        G++;
-                    }
+                    shape = new CircleShape(5, 30)
+                };
+                shape.shape.Position = new Vector2f(iCount * posScale, renderWindow.GetHeight() / 2);
+                shape.shape.FillColor = colours[iCount];
+                _gameObjects.Add(shape);
+            }
 
-                    if (G == 0 && GL == 255)
-                    {
-                        R++;
-                        GL = G;
-                    }
-                    _colors[x, y] = new Color(R, G, B);
-                }
+            for (int iCount = 0; iCount < _gameObjects.Count; iCount++)
+            {
+                var shapeBefore = (ColourObject)(_gameObjects.ElementAt(iCount));
+                var shapeAfter = iCount != 6 ? (ColourObject)(_gameObjects.ElementAt(iCount + 1)) : (ColourObject)(_gameObjects.ElementAt(0));
+                var colour = new Color(ColourLerp(shapeBefore.shape.FillColor.R, shapeAfter.shape.FillColor.R),
+                                                    ColourLerp(shapeBefore.shape.FillColor.G, shapeAfter.shape.FillColor.G),
+                                                    ColourLerp(shapeBefore.shape.FillColor.B, shapeAfter.shape.FillColor.B));
+                colorArray.Add(colour);
+            }
+
+            for (int iCount = 0; iCount < colorArray.Count; iCount++)
+            {
+                var shape = new ColourObject();
+                shape.shape = new CircleShape(10, 30);
+                shape.shape.Position = new Vector2f((iCount * posScale) - (posScale / 2), renderWindow.GetHeight() / 2);
+                shape.shape.FillColor = colorArray.ElementAt(iCount);
+                _gameObjects.Add(shape);
             }
         }
 
