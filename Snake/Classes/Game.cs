@@ -7,11 +7,30 @@ using System.Linq;
 
 namespace Snake.Classes
 {
+    struct GridNode
+    {
+        public Vector2f Position;
+        public Color Colour;
+        public int SizeCounter;
+        public int XPos;
+        public int YPos;
+
+        public GridNode(Vector2f newPosition, Color newColour, int newXPos, int newYPos)
+        {
+            Colour = newColour;
+            Position = newPosition;
+            SizeCounter = 0;
+            XPos = newXPos;
+            YPos = newYPos;
+        }
+    }
+
     public class Game : GameBase
     {
-        Snake _player;
+        Snake _player = new Snake();
 
-        Color[,] _colors = new Color[100, 100];
+        Random rand = new Random();
+        List<List<GridNode>> _map = new List<List<GridNode>>();
 
         public Game()
         {
@@ -20,7 +39,7 @@ namespace Snake.Classes
 
         public override void SetUpGame(WindowBase renderWindow)
         {
-            GenerateColours(renderWindow);
+            GenerateMap(renderWindow);
         }
 
         public override void AddEngineReference(EngineBase engine)
@@ -29,46 +48,30 @@ namespace Snake.Classes
             _inputHandler = engine.GetInputHandler();
         }
 
-        byte ColourLerp(byte current, byte target)
+        Color MakeNewColour()
         {
-            var rate = 0.5;
-            return (byte)((target - current) * rate + current);
+            var R = rand.Next(0, 255);
+            var G = rand.Next(0, 255);
+            var B = rand.Next(0, 255);
+            return new Color(Convert.ToByte(R), Convert.ToByte(G), Convert.ToByte(B));
         }
 
-        void GenerateColours(WindowBase renderWindow)
+        void GenerateMap(WindowBase window)
         {
-            var colorArray = new List<Color>();
-            var colours = new Color[7] { new Color(255, 0, 0), new Color(255, 127, 0), new Color(255, 255, 0), new Color(0, 255, 0), new Color(0, 0, 255), new Color(46, 43, 95), new Color(139, 0, 255) };
-            var posScale = (int)(renderWindow.GetWidth() / colours.Length);
+            var xScale = 10;
+            var yScale = 10;
 
-            for (int iCount = 0; iCount < colours.Length; iCount++)
+            for (int xCount = 0; xCount < window.GetRenderWindow().Size.X / xScale; xCount++)
             {
-                var shape = new ColourObject
+                var temp = new List<GridNode>();
+                for (int yCount = 0; yCount < window.GetRenderWindow().Size.Y / yScale; yCount++)
                 {
-                    shape = new CircleShape(5, 30)
-                };
-                shape.shape.Position = new Vector2f(iCount * posScale, renderWindow.GetHeight() / 2);
-                shape.shape.FillColor = colours[iCount];
-                _gameObjects.Add(shape);
-            }
-
-            for (int iCount = 0; iCount < _gameObjects.Count; iCount++)
-            {
-                var shapeBefore = (ColourObject)(_gameObjects.ElementAt(iCount));
-                var shapeAfter = iCount != 6 ? (ColourObject)(_gameObjects.ElementAt(iCount + 1)) : (ColourObject)(_gameObjects.ElementAt(0));
-                var colour = new Color(ColourLerp(shapeBefore.shape.FillColor.R, shapeAfter.shape.FillColor.R),
-                                                    ColourLerp(shapeBefore.shape.FillColor.G, shapeAfter.shape.FillColor.G),
-                                                    ColourLerp(shapeBefore.shape.FillColor.B, shapeAfter.shape.FillColor.B));
-                colorArray.Add(colour);
-            }
-
-            for (int iCount = 0; iCount < colorArray.Count; iCount++)
-            {
-                var shape = new ColourObject();
-                shape.shape = new CircleShape(10, 30);
-                shape.shape.Position = new Vector2f((iCount * posScale) - (posScale / 2), renderWindow.GetHeight() / 2);
-                shape.shape.FillColor = colorArray.ElementAt(iCount);
-                _gameObjects.Add(shape);
+                    var newPos = new Vector2f((xCount * xScale), (yCount * yScale));
+                    var newColour = MakeNewColour();
+                    var node = new GridNode(newPos, newColour, xCount, yCount);
+                    temp.Add(node);
+                }
+                _map.Add(temp);
             }
         }
 
@@ -83,7 +86,14 @@ namespace Snake.Classes
 
         public override void UpdateGameLogic()
         {
-
+            _player.ClearSnake();
+            foreach (var x in _map)
+                foreach (var y in x)
+                {
+                    _player.AddToSnake(y);
+                }
+            _gameObjects.AddRange(_player.GetSnake());
+            _player.Update();
         }
         public override void Update()
         {
