@@ -50,18 +50,17 @@ namespace Snake.Classes
             return _size;
         }
 
-        public void AddToSnake(GridNode node)
+        public void AddToSnake(ref GridNode node)
         {
-            if (node.XPos == _xPos && node.YPos == _yPos)
-            {
-                node.SizeCounter = _size;
-                _snake.Add(new ColourObject(new CircleShape(_headSize, 30), node.Colour, node.Position));
-                return;
-            }
             if (node.SizeCounter > 0)
             {
                 node.SizeCounter--;
                 _snake.Add(new ColourObject(new CircleShape(_bodySize, 30), node.Colour, node.Position));
+            }
+            if (node.XPos == _xPos && node.YPos == _yPos)
+            {
+                node.SizeCounter = _size;
+                _snake.Add(new ColourObject(new CircleShape(_headSize, 30), node.Colour, node.Position));
             }
         }
 
@@ -73,6 +72,11 @@ namespace Snake.Classes
         public void ClearSnake()
         {
             _snake.Clear();
+        }
+
+        public void ChangeDirection(Directions newDirection)
+        {
+            _currentDirection = newDirection;
         }
 
         public override void Update()
@@ -90,16 +94,15 @@ namespace Snake.Classes
                         _xPos = 159;
                     break;
                 case Directions.Up:
-                    _yPos += 1;
-                    if (_yPos > 79)
-                        _yPos = 0;
-                    break;
-                case Directions.Down:
                     _yPos -= 1;
                     if (_yPos < 0)
                         _yPos = 79;
                     break;
-
+                case Directions.Down:
+                    _yPos += 1;
+                    if (_yPos > 79)
+                        _yPos = 0;
+                    break;
             }
         }
     }

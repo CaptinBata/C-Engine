@@ -30,6 +30,7 @@ namespace Snake.Classes
         Snake _player = new Snake();
 
         Random rand = new Random();
+        int _counterMax, _counter;
         List<List<GridNode>> _map = new List<List<GridNode>>();
 
         public Game()
@@ -84,14 +85,33 @@ namespace Snake.Classes
             }
         }
 
+        void ProcessInput()
+        {
+            if (_inputHandler.GetKey(SFML.Window.Keyboard.Key.W))
+                _player.ChangeDirection(Directions.Up);
+            if (_inputHandler.GetKey(SFML.Window.Keyboard.Key.A))
+                _player.ChangeDirection(Directions.Left);
+            if (_inputHandler.GetKey(SFML.Window.Keyboard.Key.S))
+                _player.ChangeDirection(Directions.Down);
+            if (_inputHandler.GetKey(SFML.Window.Keyboard.Key.D))
+                _player.ChangeDirection(Directions.Right);
+        }
+
         public override void UpdateGameLogic()
         {
+            _gameObjects.Clear();
             _player.ClearSnake();
-            foreach (var x in _map)
-                foreach (var y in x)
+            ProcessInput();
+
+            for (int xCount = 0; xCount < _map.Count; xCount++)
+            {
+                for (int yCount = 0; yCount < _map.ElementAt(xCount).Count; yCount++)
                 {
-                    _player.AddToSnake(y);
+                    GridNode Node = _map.ElementAt(xCount).ElementAt(yCount);
+                    _player.AddToSnake(ref Node);
+                    _map[xCount][yCount] = Node;
                 }
+            }
             _gameObjects.AddRange(_player.GetSnake());
             _player.Update();
         }
