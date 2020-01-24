@@ -28,3 +28,4 @@ D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.AssemblyInfo.cs
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csproj.CopyComplete
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.dll
 D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.pdb
+D:\C#\C# Engine\Engine\obj\Debug\netcoreapp2.1\Engine.csproj.CoreCompileInputs.cache

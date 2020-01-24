@@ -12,11 +12,14 @@ namespace Engine
 
         static ConcurrentDictionary<int, IEnumerator> _coroutines = new ConcurrentDictionary<int, IEnumerator>();
         int coroutineCounter = 0;
+        int frameRateTarget;
 
-        public EngineCore()
+        public EngineCore(int frameRate)
         {
             _inputHandler = new Input();
             _runningWindow = new Window(_inputHandler, this);
+            _frameRate = frameRate;
+            Console.WriteLine($"Frame rate set to: { _frameRate}");
         }
 
         public override void RunEngine()

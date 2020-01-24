@@ -19,3 +19,4 @@ D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.AssemblyInfo.cs
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.csproj.CopyComplete
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.dll
 D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.pdb
+D:\C#\C# Engine\Application\obj\Debug\netcoreapp2.1\Application.csproj.CoreCompileInputs.cache

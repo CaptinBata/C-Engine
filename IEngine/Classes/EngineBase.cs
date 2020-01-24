@@ -10,6 +10,7 @@ namespace IEngine.Classes
         protected GameBase _runningGame;
         protected WindowBase _runningWindow;
         protected InputBase _inputHandler;
+        protected int _frameRate;
         public virtual void RunEngine()
         {
             throw new NotImplementedException();
@@ -28,6 +29,11 @@ namespace IEngine.Classes
         public virtual WindowBase GetWindow()
         {
             throw new NotImplementedException();
+        }
+
+        public int GetFrameRate()
+        {
+            return _frameRate;
         }
 
         public virtual InputBase GetInputHandler()

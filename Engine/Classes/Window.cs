@@ -45,10 +45,20 @@ namespace Engine.Classes
             _game.Update();
         }
 
+        void WaitForTick(double tick)
+        {
+            DateTime start = DateTime.Now;
+            DateTime target = start.AddSeconds(tick);
+            while (DateTime.Now < target)
+            { }
+        }
+
         public override void RunWindow()
         {
+            double tick = 1.0 / _engine.GetFrameRate();
             while (_sfmlWindow.IsOpen)
             {
+                WaitForTick(tick);
                 _sfmlWindow.DispatchEvents();
 
                 _sfmlWindow.Clear();

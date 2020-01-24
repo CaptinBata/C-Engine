@@ -13,3 +13,4 @@ D:\C#\C# Engine\Utils\obj\Debug\netstandard2.0\Utils.AssemblyInfoInputs.cache
 D:\C#\C# Engine\Utils\obj\Debug\netstandard2.0\Utils.AssemblyInfo.cs
 D:\C#\C# Engine\Utils\obj\Debug\netstandard2.0\Utils.dll
 D:\C#\C# Engine\Utils\obj\Debug\netstandard2.0\Utils.pdb
+D:\C#\C# Engine\Utils\obj\Debug\netstandard2.0\Utils.csproj.CoreCompileInputs.cache

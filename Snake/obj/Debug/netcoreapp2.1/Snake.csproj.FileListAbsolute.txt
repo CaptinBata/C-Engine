@@ -20,3 +20,4 @@ D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.AssemblyInfo.cs
 D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.csproj.CopyComplete
 D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.dll
 D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.pdb
+D:\C#\C# Engine\Snake\obj\Debug\netcoreapp2.1\Snake.csproj.CoreCompileInputs.cache
